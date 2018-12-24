@@ -1,0 +1,33 @@
+.table_settings {
+    padding-top: 15px;
+    background-color: DCDCDC;
+}
+
+.bookField {
+    text-align: center;
+    padding: 30px;
+}
+.libraryField {
+    text-align: center;
+    padding: 30px;
+}
+.libList {
+    padding: 5px 0px 5px 0px;
+}
+#newList {
+    border: none;
+    background: none;
+}
+table {
+    width: 100%;
+    margin: 15px;
+}
+
+th {
+    text-align: left;
+}
+
+h1 {
+    padding-left: 10px;
+}
+

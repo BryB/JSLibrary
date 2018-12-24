@@ -1,0 +1,55 @@
+<html>
+<title>Library Project</title>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+    <div class="table_settings">
+        <h1 id="header">Add Book</h1>
+        <div class="bookField">
+            <table>
+    	       <form>
+                    <tr>
+                        <th>Title:</th>
+                        <th>Author:</th>
+                        <th>Pages:</th>
+                        <th>Read:</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="inputId" id="title" type= "text" placeholder="E.g How To Open Things." value"Title"/>
+                        </td>
+                        <td>
+                            <input class="inputId" id="author" type= "text" placeholder="E.g Patrick Star." value"Read"/>
+                        </td>
+                        <td>
+                            <input class="inputId" id="pages" type= "number" value"Pages"/>
+                        </td>
+                        <td>
+                            <input class="inputId" id="read" type= "radio" name="read" value"Read"/>
+                        </td>
+                        <td>
+                            <button class="inputId" id="submitB" type="submit" onclick="addBookToLibrary">Submit</button>
+                        </td>
+                    </tr>
+    	       </form>
+            </table>
+        </div>
+    </div>
+    <div style="padding-top: 15px;">
+        <h1>My Library</h1>
+        <input type="button" id="newList" value="New List" />
+        <div class='libraryField'>
+            <table id="Library">
+                <tr>
+                    <th>Title:</th>
+                    <th>Author:</th>
+                    <th>Pages:</th>
+                    <th>Read:</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+    <script src='scripts/main.js'></script>
+</html>

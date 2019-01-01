@@ -1,14 +1,5 @@
 "use strict"
 
-let myLibrary = [];
-let table = document.getElementById('Library')
-let title = document.getElementById('title');
-let author = document.getElementById('author');
-let pages = document.getElementById('pages');
-let read = document.getElementById('read');
-let addBook = document.getElementById('submitB');
-let newList = document.getElementById('newList');
-
 class book
 {
     constructor (title, author, pages, read) {
@@ -18,7 +9,17 @@ class book
         this.read = read
     };
     
-    addBookToLibrary() {
+    let myLibrary = [];
+    let table = document.getElementById('Library')
+    let title = document.getElementById('title');
+    let author = document.getElementById('author');
+    let pages = document.getElementById('pages');
+    let read = document.getElementById('read');
+    let addBook = document.getElementById('submitB');
+    let newList = document.getElementById('newList');
+
+
+    function addBookToLibrary() {
         let b_title = title.value;
         let b_author = author.value;
         let b_pages = pages.value;
@@ -35,11 +36,11 @@ class book
         displayLibrary(newBook);
    }
 
-   updateStorage() {
+    function updateStorage() {
         localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
     }
 
-    loadStorage() {
+    function loadStorage() {
         if (!localStorage.myLibrary)
             localStorage.setItem('myLibrary', JSON.stringify(myLibrary));
         else {
@@ -51,12 +52,12 @@ class book
         myLibrary.forEach(book => displayLibrary(book));
     }
 
-    addBookToStorage(book) {
+    function addBookToStorage(book) {
         myLibrary.push(book);
         updateStorage();
     }
 
-    displayLibrary(newBook) {
+    function displayLibrary(newBook) {
         table.innerHTML += `
         <tr data-book="${myLibrary.indexOf(newBook)}">
         <td class="libList">${newBook.title}</td>
@@ -66,13 +67,13 @@ class book
         </tr>`;
     }
 
-    changeText(iD,newText) {
+    function changeText(iD,newText) {
         if (!iD || !newText)
             return;
         document.getElementById(iD).innerHTML = newText;
     }
 
-    resetinputs() {
+    function resetinputs() {
         let inputElements = document.querySelectorAll('.inputId');
         for(let i = 0; i < inputElements.length; i++)
         {
